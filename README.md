@@ -1,4 +1,4 @@
-# Northern Trusted Services — Website POC
+# Northern Clean by Northern Trusted Services
 
 Single-page site for a cleaning service (Offices, Home, Commercial), built with
 Tailwind CSS and Alpine.js via CDN — no build step required.
@@ -23,5 +23,4 @@ Then open http://localhost:8000
 
 - The contact form does not send data anywhere yet — submitting it logs the
   `{ name, contact, inquiry }` payload as JSON to the browser console.
-- Tailwind is loaded via the Play CDN, which is fine for a POC but is not
-  recommended for production (it compiles CSS in-browser on every load).
+- Tailwind is loaded via the Play CDN
