@@ -222,9 +222,9 @@
                 },
               };
               try {
-                await fetch('https://hooks.zapier.com/hooks/catch/28585784/4t9b65x/', {
+                await fetch('https://hooks.zapier.com/hooks/catch/28585784/4t9b65x', {
                   method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: { 'Content-Type': 'text/plain' },
                   body: JSON.stringify(payload),
                 });
               } catch (error) {
@@ -285,7 +285,7 @@
 
           <p x-show="submitted" x-cloak x-transition
              class="text-center text-sm font-medium text-green-600">
-            Thanks! Your message has been logged to the console.
+            Thanks! Your message has been logged.
           </p>
         </form>
       </div>
