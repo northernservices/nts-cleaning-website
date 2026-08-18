@@ -205,13 +205,23 @@
             contact: '',
             inquiry: '',
             submitted: false,
-            submitForm() {
+            async submitForm() {
               const payload = {
-                name: this.name,
-                contact: this.contact,
-                inquiry: this.inquiry,
+                data: {
+                  from: this.contact,
+                  subject: `New inquiry from ${this.name}`,
+                  message: `From: ${this.name}\n\n${this.inquiry}`,
+                },
               };
-              console.log(JSON.stringify(payload, null, 2));
+              try {
+                await fetch('https://hooks.zapier.com/hooks/catch/28585784/4t9b65x/', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                });
+              } catch (error) {
+                console.error('Failed to submit form:', error);
+              }
               this.submitted = true;
               this.name = '';
               this.contact = '';
