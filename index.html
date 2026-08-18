@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Northern Trusted Services | Professional Cleaning</title>
+<meta name="description" content="Northern Trusted Services — trusted cleaning for offices, homes, and commercial spaces." />
+
+<!-- Tailwind CSS (Play CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eff6ff',
+            100: '#dbeafe',
+            500: '#2563eb',
+            600: '#1d4ed8',
+            700: '#1e40af',
+            900: '#1e3a8a',
+          },
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Alpine.js (Collapse plugin must load before Alpine core) -->
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-white text-slate-800 antialiased" x-data="{ mobileMenuOpen: false }">
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#top" class="flex items-center gap-2 font-bold text-lg text-brand-700">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600 text-white text-sm">NTS</span>
+          <span>Northern Trusted Services</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-brand-600 transition-colors">Services</a>
+          <a href="#about" class="hover:text-brand-600 transition-colors">Why Us</a>
+          <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+          <a href="#contact"
+             class="rounded-md bg-brand-600 px-4 py-2 text-white font-semibold hover:bg-brand-700 transition-colors">
+            Talk to Us
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          @click="mobileMenuOpen = !mobileMenuOpen"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100"
+          aria-label="Toggle menu"
+        >
+          <svg x-show="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg x-show="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <div x-show="mobileMenuOpen" x-collapse class="md:hidden pb-4" style="display:none">
+        <div class="flex flex-col gap-1 text-sm font-medium">
+          <a @click="mobileMenuOpen=false" href="#services" class="px-2 py-2 rounded hover:bg-slate-100">Services</a>
+          <a @click="mobileMenuOpen=false" href="#about" class="px-2 py-2 rounded hover:bg-slate-100">Why Us</a>
+          <a @click="mobileMenuOpen=false" href="#contact" class="px-2 py-2 rounded hover:bg-slate-100">Contact</a>
+          <a @click="mobileMenuOpen=false" href="#contact"
+             class="mt-1 text-center rounded-md bg-brand-600 px-4 py-2 text-white font-semibold hover:bg-brand-700">
+            Talk to Us
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-brand-50 to-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-28 text-center">
+        <p class="inline-block rounded-full bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1 mb-4">
+          Trusted &amp; Insured Cleaning Professionals
+        </p>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+          Cleaning You Can Trust,<br class="hidden sm:block" /> Spaces You Can Be Proud Of
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-slate-600">
+          Northern Trusted Services delivers reliable, detail-oriented cleaning for offices,
+          homes, and commercial spaces &mdash; on your schedule, to your standard.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="#contact"
+             class="w-full sm:w-auto rounded-md bg-brand-600 px-6 py-3 text-white font-semibold shadow hover:bg-brand-700 transition-colors">
+            Talk to Us
+          </a>
+          <a href="#services"
+             class="w-full sm:w-auto rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-14 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Our Services</h2>
+          <p class="mt-3 text-slate-600">
+            Flexible cleaning plans tailored to the space you need cared for.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Offices -->
+          <div class="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="h-12 w-12 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 9h1m4 0h1M9 13h1m4 0h1" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900">Offices</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Daily, weekly, or after-hours office cleaning that keeps your workspace
+              sharp for employees and clients alike.
+            </p>
+          </div>
+
+          <!-- Home -->
+          <div class="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition-shadow">
+            <div class="h-12 w-12 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M5 10v10h14V10" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900">Home</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Recurring or one-time home cleaning &mdash; kitchens, bathrooms, floors,
+              and everything in between &mdash; done with care.
+            </p>
+          </div>
+
+          <!-- Commercial -->
+          <div class="rounded-xl border border-slate-200 p-6 hover:shadow-lg transition-shadow sm:col-span-2 lg:col-span-1">
+            <div class="h-12 w-12 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21V9h4v12M14 21V4h6v17M10 12h0M10 15h0M10 18h0" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900">Commercial</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Retail, warehouses, and large facilities &mdash; scalable cleaning
+              programs built around your operational hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="about" class="py-14 sm:py-20 bg-slate-50 border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Why Northern Trusted Services</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+          <div class="p-4">
+            <p class="text-2xl font-bold text-brand-600">Insured</p>
+            <p class="mt-1 text-sm text-slate-600">Fully insured &amp; background-checked staff.</p>
+          </div>
+          <div class="p-4">
+            <p class="text-2xl font-bold text-brand-600">Flexible</p>
+            <p class="mt-1 text-sm text-slate-600">Plans that fit your schedule, not the other way around.</p>
+          </div>
+          <div class="p-4">
+            <p class="text-2xl font-bold text-brand-600">Reliable</p>
+            <p class="mt-1 text-sm text-slate-600">Consistent quality, every visit, on time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-14 sm:py-20 bg-white">
+      <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Talk to Us</h2>
+          <p class="mt-3 text-slate-600">
+            Tell us a bit about what you need and we'll get back to you.
+          </p>
+        </div>
+
+        <form
+          x-data="{
+            name: '',
+            contact: '',
+            inquiry: '',
+            submitted: false,
+            submitForm() {
+              const payload = {
+                name: this.name,
+                contact: this.contact,
+                inquiry: this.inquiry,
+              };
+              console.log(JSON.stringify(payload, null, 2));
+              this.submitted = true;
+              this.name = '';
+              this.contact = '';
+              this.inquiry = '';
+              setTimeout(() => { this.submitted = false }, 4000);
+            }
+          }"
+          @submit.prevent="submitForm"
+          class="space-y-5 rounded-xl border border-slate-200 p-6 sm:p-8 shadow-sm"
+        >
+          <div>
+            <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+            <input
+              type="text"
+              id="name"
+              x-model="name"
+              required
+              placeholder="Jane Smith"
+              class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+            />
+          </div>
+
+          <div>
+            <label for="contact-info" class="block text-sm font-medium text-slate-700 mb-1">Email or Phone Number</label>
+            <input
+              type="text"
+              id="contact-info"
+              x-model="contact"
+              required
+              placeholder="jane@example.com or (555) 123-4567"
+              class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+            />
+          </div>
+
+          <div>
+            <label for="inquiry" class="block text-sm font-medium text-slate-700 mb-1">Inquiry</label>
+            <textarea
+              id="inquiry"
+              x-model="inquiry"
+              required
+              rows="4"
+              placeholder="Tell us about the space and what you need cleaned..."
+              class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-md bg-brand-600 px-6 py-3 text-white font-semibold hover:bg-brand-700 transition-colors"
+          >
+            Talk to Us
+          </button>
+
+          <p x-show="submitted" x-cloak x-transition
+             class="text-center text-sm font-medium text-green-600">
+            Thanks! Your message has been logged to the console.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
+      <p class="font-semibold text-white">Northern Trusted Services</p>
+      <p class="mt-1">&copy; <span x-data x-text="new Date().getFullYear()"></span> Northern Trusted Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
